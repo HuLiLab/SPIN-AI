@@ -22,8 +22,6 @@ Parameters: <(string)experiment_name>
 
 Output:
 
-visualization.py: visualizes a spatial transcriptomics slide colored by the distance of each spot to their original location.
-
 get_spgs.py: calculates SPGs from the attribution files. SPG criteria can be controlled using parameters.
 
 Parameters: <(string)experiment_name>  <(float)meanImportance_threshold> <(float [0-1])percent_non_zero_importance_threshold>
