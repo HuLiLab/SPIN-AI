@@ -3,14 +3,15 @@ import sys
 import os
 
 args=sys.argv
-pathToAttributions=args[1]
+exp=sys.argv[1]
+pathToAttributions=exp+'/Attribution/'
 meanImpThresh=args[2]
 PNIThresh=args[3]
 
 #Concatenate Attributions
 attributions=[]
 for file in os.listdir(pathToAttributions):
-  attributions.append(pd.read_csv(pathToAttributions+'/'+file,index_col=0))
+  attributions.append(pd.read_csv(pathToAttributions+file,index_col=0))
 attMatrix=abs(pd.concat(attributions,axis=0))
 
 #Get Mean Importance
@@ -35,5 +36,5 @@ isSPG=isSPG | ((MNI>minMNI) & (PNI>PNIThresh))
 spgTable['isSPG']=isSPG
 
 #Write
-spgTable.to_csv(pathToAttributions+'/spgTable.csv')
+spgTable.to_csv(pathToAttributions+'spgTable.csv')
 
