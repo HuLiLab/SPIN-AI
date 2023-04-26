@@ -4,7 +4,7 @@ Created on Tue Aug  2 12:35:41 2022
 
 @author: m161902
 """
-from utils import *
+from SpinAI.utils import *
 from tensorflow.keras.models import Model
 from tensorflow import keras
 import sys
