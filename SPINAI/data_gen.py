@@ -1,4 +1,4 @@
-from utils import *
+from SPINAI.utils import *
 import sys
 import os
 import pandas as pd
