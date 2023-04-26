@@ -5,7 +5,7 @@ Created on Tue Oct 11 15:48:20 2022
 @author: m161902
 """
 
-from utils import *
+from SPINAI.utils import *
 from tensorflow.keras.models import Model
 from tensorflow.keras.models import load_model
 from tensorflow.keras.layers import Input, Dense, BatchNormalization
