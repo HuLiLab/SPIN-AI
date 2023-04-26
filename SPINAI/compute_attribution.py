@@ -14,7 +14,7 @@ import math
 import scipy.stats as ss
 import sys
 import os
-from explain import DeepExplain
+from SPINAI.explain import DeepExplain
 
 
 """
