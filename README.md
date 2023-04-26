@@ -16,4 +16,4 @@ compute_attributions.py: computes feature attributions using DeepLift on the mod
 
 visualization.py: visualizes a spatial transcriptomics slide colored by the distance of each spot to their original location.
 
-(to_add) get_spgs.py: calculates SPGs from the attribution files. SPG criteria can be controlled using parameters.
+get_spgs.py: calculates SPGs from the attribution files. SPG criteria can be controlled using parameters.
