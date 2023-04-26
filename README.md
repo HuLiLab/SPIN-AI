@@ -12,10 +12,14 @@ Within the directory should be a spot by counts matrix (counts.csv) and a coordi
 
 build_models.py: builds the SPIN-AI models and performs hyperparameter tuning. This script will create a CV folder within the experiment directory that contains performance metrics, predictions, and models for each cross-validation fold and for each hyperparameter.
 
-Parameters: experiment_name
+Parameters: (string)experiment_name
 
 compute_attributions.py: computes feature attributions using DeepLift on the models with the best hyperparameter combination as determined in the previous step. The DeepLift reference is set to a matrix of 0s, but other references can be manually specified.
+
+Parameters: (string)experiment_name
 
 visualization.py: visualizes a spatial transcriptomics slide colored by the distance of each spot to their original location.
 
 get_spgs.py: calculates SPGs from the attribution files. SPG criteria can be controlled using parameters.
+
+Parameters: (string)experiment_name  (float)meanImportance_threshold (float [0-1])percent_non_zero_importance_threshold
