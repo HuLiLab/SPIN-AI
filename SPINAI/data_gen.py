@@ -4,7 +4,6 @@ import os
 import pandas as pd
 import numpy as np
 import re
-#use tensorflow 2.0 to save myself a headache
 
 #collect arguments
 args=sys.argv
