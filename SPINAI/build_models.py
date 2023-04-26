@@ -125,7 +125,7 @@ def executeModeling(x_path,y_path,outDir):
     best_l=paramCombos['N Layers'][optimal]
     best_lr=paramCombos['Learning Rate'][optimal]
     bestPred=pd.read_csv(outDir+str(best_l)+'_'+str(best_lr)+'/predictions.csv',index_col=0).to_numpy()
-    makeErrorPlotsFromData(bestPred[:,0:2], bestPred[:,2:4], None, "Slide 1", (0,40),plotPredicted=False,savePath=outDir+'pred.png')
+    makeErrorPlotsFromData(bestPred[:,0:2], bestPred[:,2:4], None, "Sample", (0,40),plotPredicted=False,savePath=outDir+'pred.png')
     return
 
 #Main runs the function in a loop
@@ -134,32 +134,15 @@ if __name__=='__main__':
     #collect arguments
     args=sys.argv
 
-    patientName=args[1]
+    experimentName=args[1]
 
     #Create General Directory
-    dataDir=patientName+'/Processed_Data/'
-    rootDir=patientName+'/CV/'
-
-    if not os.path.exists(rootDir):
-        os.mkdir(rootDir)
-
-    outDir=rootDir+'/Slide_1/'
+    dataDir=experimentName+'/Processed_Data/'
+    outDir=experimentName+'/CV/'
 
     if not os.path.exists(outDir):
         os.mkdir(outDir)
 
-    executeModeling(dataDir+'X_train.csv',dataDir+'y_train.csv',outDir)
-
-    outDir=rootDir+'/Slide_2/'
-    if not os.path.exists(outDir):
-        os.mkdir(outDir)
-
-    executeModeling(dataDir+'X_val.csv',dataDir+'y_val.csv',outDir)
-
-    outDir=rootDir+'/Slide_3/'
-    if not os.path.exists(outDir):
-        os.mkdir(outDir)
-
-    executeModeling(dataDir+'X_test.csv',dataDir+'y_test.csv',outDir)    
+    executeModeling(dataDir+'counts.csv',dataDir+'coords.csv',outDir)
 
 
