@@ -29,6 +29,11 @@ tensorflow 1.15.0
 
 scipy 1.7.3
 
+pandas 1.3.5
+
+numpy 1.21.6
+
+matplotlib 3.5.3
 
 2. Input Data Format
 
