@@ -10,20 +10,34 @@ Within the directory should be a spot by counts matrix (counts.csv) and a coordi
 
 3. Workflow
 
-build_models.py: builds the SPIN-AI models and performs hyperparameter tuning. This script will create a CV folder within the experiment directory that contains performance metrics, predictions, and models for each cross-validation fold and for each hyperparameter.
+**build_models.py**: builds the SPIN-AI models and performs hyperparameter tuning. This script will create a CV folder within the experiment directory that contains performance metrics, predictions, and models for each cross-validation fold and for each hyperparameter.
 
 Parameters: <(string)experiment_name>
 
-Output:
+**Output**: Outputs are deposited in the [experiment_name]/CV/ directory
 
-compute_attributions.py: computes feature attributions using DeepLift on the models with the best hyperparameter combination as determined in the previous step. The DeepLift reference is set to a matrix of 0s, but other references can be manually specified.
+[number_of_layers_learningRate]/predictions.csv: test fold predictions from a model trained with hyperparameters in the directory name
+
+[number_of_layers_learningRate]/Models/: saved models from each iteration of cross-validation
+
+cv_results.csv: CV error for each hyperparameter set
+
+fold_ids.csv: CV fold assignments for each spot
+
+pred.png: visualization of prediction error across different spots in the spatial transcriptomic sample
+
+**compute_attributions.py**: computes feature attributions using DeepLift on the models with the best hyperparameter combination as determined in the previous step. The DeepLift reference is set to a matrix of 0s, but other references can be manually specified.
 
 Parameters: <(string)experiment_name>
 
-Output:
+**Output**: Outputs are deposited in the [experiment_name]/CV/ directory
 
-get_spgs.py: calculates SPGs from the attribution files. SPG criteria can be controlled using parameters.
+/Attribution/: Directory that contains all DeepLift attributions for all input genes for spots from each CV fold. Attributions are stored as a csv file for each fold.
+
+**get_spgs.py**: calculates SPGs from the attribution files. SPG criteria can be controlled using parameters.
 
 Parameters: <(string)experiment_name>  <(float)meanImportance_threshold> <(float [0-1])percent_non_zero_importance_threshold>
 
-Output:
+**Output**: Outputs are deposited in the [experiment_name]/CV/ directory
+
+/Attribution/spgTable.csv: table containing the mean importance, MNI, and PNI scores for all genes and whether or not the gene is an SPG.
