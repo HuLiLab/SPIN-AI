@@ -2,6 +2,34 @@
 Spatially Infromed Artificial Intelligence. A deep learning method for identifying Spatially Predictive Genes from spatial transcriptomics data.
 
 1. Prerequisites
+
+SPIN-AI was built using the following software versions:
+
+python 3.10.0
+
+pandas 1.4.3
+
+numpy 1.23.1
+
+tensorflow 2.9.0 
+
+keras 2.9.0
+
+matplotlib 3.5.2
+
+sklearn 0.0
+
+scipy 1.8.1
+
+For running the attributions script, we recommend a virtual environment with:
+
+python 3.7.5
+
+tensorflow 1.15.0
+
+scipy 1.7.3
+
+
 2. Input Data Format
 
 For each spatial transcriptomics experiment, a directory should be created as [experiment_name]/Processed_Data/
