@@ -29,7 +29,7 @@ numpy 1.21.6
 
 matplotlib 3.5.3
 
-skimage 0.18.1
+DeepExplain (installed from [here]([url](https://github.com/marcoancona/DeepExplain))
 
 2. Input Data Format
 
