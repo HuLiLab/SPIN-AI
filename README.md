@@ -29,6 +29,8 @@ numpy 1.21.6
 
 matplotlib 3.5.3
 
+skimage 0.18.1
+
 2. Input Data Format
 
 For each spatial transcriptomics experiment, a directory should be created as [experiment_name]/Processed_Data/
