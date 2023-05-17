@@ -10,8 +10,6 @@ from tensorflow.keras.models import Model
 from tensorflow.keras.models import load_model
 from tensorflow.keras.layers import Input, Dense, BatchNormalization
 from tensorflow import keras
-import math
-import scipy.stats as ss
 import sys
 import os
 from SPINAI.explain import DeepExplain
