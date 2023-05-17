@@ -10,7 +10,6 @@ from tensorflow import keras
 import sys
 import os
 import itertools
-from sklearn.preprocessing import StandardScaler, MinMaxScaler
 import gc
 
 
