@@ -17,17 +17,11 @@ keras 2.9.0
 
 matplotlib 3.5.2
 
-sklearn 0.0
-
-scipy 1.8.1
-
 For running the attributions script, we recommend a virtual environment with:
 
 python 3.7.5
 
 tensorflow 1.15.0
-
-scipy 1.7.3
 
 pandas 1.3.5
 
